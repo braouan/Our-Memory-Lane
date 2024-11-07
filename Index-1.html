@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylen3.css">
+    <link rel="stylesheet" href="style.css">
     <title>Our Memory Lane</title>
 </head>
+
 
 <body>
     <div class="container">
         <header>
             <nav>
-                <nav text>
-                    <a onclick="showSection('Accueil')">Accueil</a>
-                    <a onclick="showSection('exposition')">Exposition</a>
-                    <a onclick="showSection('boutique')">Boutique</a>
-                    <a onclick="showSection('contact')">Contact</a>
-                </nav>
+                <a onclick="showSection('accueil')">Accueil</a>
+                <a onclick="showSection('exposition')">Exposition</a>
+                <a onclick="showSection('boutique')">Boutique</a>
+                <a onclick="showSection('contact')">Contact</a>
             </nav>
         </header>
 
-    <!-- Section Accueil -->
+
+        <!-- Section Accueil -->
         <section id="accueil" class="content-section">
             <div class="title">
                 <h1>Our Memory Lane</h1>
@@ -30,7 +30,7 @@
                 <img src="images/tendre.solitude.img2.jpg" alt="Image description">
             </div>
 
-            <!-- Quatre sliders avec des boutons de navigation -->
+
             <div class="images">
                 <div class="slider">
                     <div class="slide active"><img src="images/automne.webp" alt="automne 1" style="width:100%; height:100%; object-fit: cover;"></div>
@@ -62,25 +62,40 @@
                 </div>
             </div>
         </section>
-    
-    <!-- Section Exposition -->
-    <section id="exposition" class="content-section" style="display: none;">
-        <h1>Exposition</h1>
-        <p>Contenu de la section exposition...</p>
-    </section>
 
-    <!-- Section Boutique -->
-    <section id="boutique" class="content-section" style="display: none;">
-        <h1>Boutique</h1>
-        <p>Contenu de la section boutique...</p>
-    </section>
 
-    <!-- Section Contact -->
-    <section id="contact" class="content-section" style="display: none;">
-        <h1>Contact</h1>
-        <p>Contenu de la section contact...</p>
-    </section>
-</div>
+        <!-- Section Exposition -->
+        <section id="exposition" class="content-section" style="display: none;">
+            <h1>Exposition</h1>
+            <p>Contenu de la section exposition...</p>
+        </section>
+
+
+        <!-- Section Boutique -->
+        <section id="boutique" class="content-section" style="display: none;">
+            <h1>Boutique</h1>
+            <p>Contenu de la section boutique...</p>
+        </section>
+
+
+        <!-- Section Contact -->
+        <section id="contact" class="content-section" style="display: none;">
+            <h1>Contact</h1>
+            <div class="adress">
+                <p>Our Memory Lane Gallery</p>
+                <p>29 rue du Docteur Blanche<br>75016<br>PARIS</p>
+            </div>
+            <div class="hours">
+                <p>Mardi à Vendredi : 15h-19h</p>
+                <p>Samedi : 11h-19h</p>
+                <p>et sur RDV.</p>
+            </div>
+                   
+
+
+        </section>
+    </div>
+
 
     <!-- Footer -->
     <footer>
@@ -91,7 +106,7 @@
             <img src="logo/X Logo.svg" alt="Logo 4">
         </div>
 
-        <!-- Formulaire de Newsletter -->
+
         <div class="newsletter">
             <h3>Abonnez-vous à notre newsletter</h3>
             <input type="email" placeholder="Entrez votre email" required>
@@ -99,30 +114,10 @@
         </div>
     </footer>
 
-    <script>
-        function showSection(sectionId) {
-            // Cache toutes les sections
-            const sections = document.querySelectorAll('.content-section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
 
-            // Affiche la section sélectionnée
-            const selectedSection = document.getElementById(sectionId);
-            if (selectedSection) {
-                selectedSection.style.display = 'block';
-            }
-        }
-
-        function moveSlide(button, direction) {
-            const slider = button.closest('.slider');
-            const slides = slider.querySelectorAll('.slide');
-            let activeIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
-            slides[activeIndex].classList.remove('active');
-            activeIndex = (activeIndex + direction + slides.length) % slides.length;
-            slides[activeIndex].classList.add('active');
-        }
-    </script>
+    <script src="javascript.java"></script>
 </body>
 </html>
+
+
 
