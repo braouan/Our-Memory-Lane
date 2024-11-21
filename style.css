@@ -105,7 +105,7 @@
     }
 
 
-        /* Style pour chaque slider */
+     /* Style pour chaque slider */
     .slider {
         position: relative;
         width: 550px;
@@ -113,7 +113,6 @@
         overflow: hidden;
         margin-bottom: 20px;
     }
-
 
     .slide {
         position: absolute;
@@ -123,11 +122,9 @@
         transition: opacity 0.5s ease-in-out;
     }
 
-
     .slide.active {
         opacity: 1;
     }
-
 
     .images {
         display: flex;
@@ -141,7 +138,6 @@
         object-fit: cover;
     }
 
-
     .button {
         position: absolute;
         top: 50%;
@@ -154,16 +150,28 @@
         cursor: pointer;
     }
 
-
     .prev {
         left: 10px;
     }
-
 
     .next {
         right: 10px;
     }
 
+    .slider-description {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #444;
+    font-style: italic;
+}
+
+.images-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
+    margin-top: 20px;
+}
 
         /* Styles de la section contact*/
     #contact h1 {
