@@ -386,8 +386,8 @@
     
     
         .title{
-             width: 567px;
-             height: 125px;
+             width: auto;
+             height: auto;
         }
     }
     
